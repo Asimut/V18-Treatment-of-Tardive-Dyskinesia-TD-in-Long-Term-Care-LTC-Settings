@@ -26,6 +26,16 @@
     if(titleText!= "HOME"){
       title.attr('name', newTitle);
     }
+
+    //Set NextButton Title
+    var titleNext = $('.lesson-nav--next .lesson-nav__link-text'),
+    titleNextLink = titleNext.closest('.lesson-nav-link__link').attr('href'),
+    titleNextText = titleNext.text();
+
+    var newNextTitle = $('.nav-sidebar__outline-section-item__link[href="'+titleNextLink+'"]').text();
+    // if(titleNextText!= "HOME"){
+      titleNext.attr('name', newNextTitle);
+    // }
       
   });  
   
@@ -41,6 +51,16 @@
     if(titleText!= "HOME"){
       title.text(newTitle);
     }
+
+    //Set NextButton Title
+    var titleNext = $('.lesson-nav--next .lesson-nav__link-text'),
+    titleNextLink = titleNext.closest('.lesson-nav-link__link').attr('href'),
+    titleNextText = titleNext.text();
+
+    var newNextTitle = $('.nav-sidebar__outline-section-item__link[href="'+titleNextLink+'"]').text();
+    // if(titleNextText!= "HOME"){
+      titleNext.text(newNextTitle);
+    // }
         
   });
 
@@ -317,8 +337,10 @@ function fixedPlace() {
     var elFixed = $('#app .block-impact--note-floatingmodal .block-impact__container');
 
     if(elFixed.length){
-      var leftOffset = $('.continue-btn').offset().left,
-          contentWidth = $('.continue-btn').outerWidth();          
+      var leftOffset = $('.custom-accordion .blocks-accordion__wrapper').offset().left,
+          contentWidth = $('.custom-accordion .blocks-accordion__wrapper').outerWidth();    
+      // var leftOffset = $('.continue-btn').offset().left,
+      //     contentWidth = $('.continue-btn').outerWidth();         
 
       var a = $(window).width() - (leftOffset + contentWidth),
           aNew = a - $('.block-impact--note-floatingmodal .block-impact__container').outerWidth() - 10;
