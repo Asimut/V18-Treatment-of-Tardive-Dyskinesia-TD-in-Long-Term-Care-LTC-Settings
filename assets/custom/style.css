@@ -1,377 +1,412 @@
 /*
  * New Styles
  */
-.nav-sidebar-header__graphic,
-.classic .cover__header-content {
-    background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
-}
-.sidebar-sublist-0 .nav-sidebar-header__graphic {
-    background: #595478;
-}
-.cover__header {
-    position: relative;
-    padding-bottom: 50px;
-    background: transparent linear-gradient(90deg,#43588d,#20223e) 0 0 no-repeat;
-}
-.cover__header-content-title{
-    position: relative;
-}
-@media(min-width:800px){
-    .cover__header-content-title::before {
-        content: '';
-        background-image: url(cover_logo.png);
-        width: 552px;
-        height: 551px;
-        position: absolute;
-        right: 100%;
-        top: 75%;
-        transform: translateY(-50%);
-    }
-}
-@media (min-width: 48em){
-    .classic .cover__header-content {
-        min-height: 40rem;
-        padding: 4.4rem 5rem 5.4rem;
-    }
-}
 
-/*
- * Sidebar %Complete 
+ .nav-sidebar-header__graphic,
+ .classic .cover__header-content {
+     background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
+     background: transparent -o-linear-gradient(left,#d50054,#ff6b00) 0 0 no-repeat;
+     background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
+ }
+ .sidebar-sublist-0 .nav-sidebar-header__graphic {
+     background: #595478;
+ }
+ .cover__header {
+     position: relative;
+     padding-bottom: 50px;
+     background: transparent -webkit-gradient(linear,left top, right top,from(#43588d),to(#20223e)) 0 0 no-repeat;
+     background: transparent -o-linear-gradient(left,#43588d,#20223e) 0 0 no-repeat;
+     background: transparent linear-gradient(90deg,#43588d,#20223e) 0 0 no-repeat;
+ }
+ .cover__header-content-title{
+     position: relative;
+ }
+ @media(min-width:800px){
+     .cover__header-content-title::before {
+         content: '';
+         background-image: url(cover_logo.png);
+         width: 552px;
+         height: 551px;
+         position: absolute;
+         right: 100%;
+         top: 75%;
+         -webkit-transform: translateY(-50%);
+             -ms-transform: translateY(-50%);
+                 transform: translateY(-50%);
+     }
+ }
+ @media (min-width: 48em){
+     .classic .cover__header-content {
+         min-height: 40rem;
+         padding: 4.4rem 5rem 5.4rem;
+     }
+ }
+ 
+ /*
+  * Sidebar %Complete 
+  */
+ .nav-sidebar-header__progress-track, 
+ .nav-sidebar-header__progress-text {
+     display: none;
+ }
+ .lesson-progress__tooltip.lesson-progress__tooltip--sidebar {
+     display: none!important;
+ }
+ .classic .nav-sidebar-header__inner:not(.nav-sidebar-header__inner--compact) {
+     padding-bottom: 4rem;    
+ }
+ .nav-sidebar__outline-item:first-child .nav-sidebar__outline-section-item--active:after{
+     border-color: #595478;
+ }
+ .nav-sidebar__outline-item:first-child .progress-circle {
+     color: #595478!important;
+ }
+ /* .nav-sidebar__body{
+     position: relative;
+ }
+ .nav-sidebar__body::before{
+     content: '';
+     display: block;
+     height: 30px;
+     background: transparent linear-gradient(90deg,#43588d,#20223e) 0 0 no-repeat;
+ } */
+ 
+ .lesson-nav--previous .lesson-nav__link-text[name] {
+     font-size: 0;
+ }
+ .lesson-nav--previous .lesson-nav__link-text[name]::before {
+     content: attr(name);
+     font-size: 15px;
+ }
+ 
+ 
+ /*
+  * Progress
+  */
+ .progress {
+     visibility: hidden;
+ }
+ .progress-bar {
+     display: none;
+ }
+ 
+ 
+ /*
+  * Animations
+  */
+ .continue-btn{
+     padding-top: 30px;
+     padding-bottom: 30px;
+     -webkit-transition: all ease-in-out 300ms;
+     -o-transition: all ease-in-out 300ms;
+     transition: all ease-in-out 300ms;
+ }
+ .continue-btn:hover {
+     opacity: .8;
+ }
+ 
+ /*
+  * Accordion icon
  */
-.nav-sidebar-header__progress-track, 
-.nav-sidebar-header__progress-text {
-    display: none;
-}
-.lesson-progress__tooltip.lesson-progress__tooltip--sidebar {
-    display: none!important;
-}
-.classic .nav-sidebar-header__inner:not(.nav-sidebar-header__inner--compact) {
-    padding-bottom: 4rem;    
-}
-.nav-sidebar__outline-item:first-child .nav-sidebar__outline-section-item--active:after{
-    border-color: #595478;
-}
-.nav-sidebar__outline-item:first-child .progress-circle {
-    color: #595478!important;
-}
-/* .nav-sidebar__body{
-    position: relative;
-}
-.nav-sidebar__body::before{
-    content: '';
-    display: block;
-    height: 30px;
-    background: transparent linear-gradient(90deg,#43588d,#20223e) 0 0 no-repeat;
-} */
-
-
-
-/*
- * Progress
+ .blocks-accordion__header {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+ }
+ .blocks-accordion__title .blocks-accordion__icon {
+     font-size: 0;
+ }
+ .blocks-accordion__title .blocks-accordion__icon:before {
+     content: '';
+     display: block;
+     width: 40px;
+     height: 37px;
+     background-image: url(chat.svg);
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
+ }
+ .custom-accordion .blocks-accordion__item {
+     border-top-color: #A6BBC3;
+ }
+ .custom-accordion .block-card.bg--light, 
+ .custom-accordion .blocks-accordion__wrapper {
+     -webkit-box-shadow: none;
+             box-shadow: none;
+     border-left-color: transparent;
+     border-right-color: transparent;
+     border-bottom-color: #A6BBC3;
+ }
+ .custom-accordion + .custom-accordion .blocks-accordion__item:first-child {
+     border-top: none;
+ }
+ .custom-accordion .blocks-accordion__toggler {
+     font-size: 0;
+     position: relative;
+ }
+ .custom-accordion .blocks-accordion__toggler::before {
+     content: '';
+     background-image: url(arrow_down.png);
+     display: block;
+     width: 51px;
+     height: 51px;
+     position: absolute;
+     right: 0;
+     top: 50%;
+     -webkit-transform: translateY(-50%) rotate(180deg);
+         -ms-transform: translateY(-50%) rotate(180deg);
+             transform: translateY(-50%) rotate(180deg);
+ }
+ .custom-accordion .blocks-accordion__item--closed .blocks-accordion__toggler::before{
+     -webkit-transform: translateY(-50%);
+         -ms-transform: translateY(-50%);
+             transform: translateY(-50%);
+ }
+ @media(max-width:760px){
+     .custom-accordion .blocks-accordion__header {
+         padding: 15px 20px;
+     }
+     .custom-accordion .blocks-accordion__toggler::before {
+         width: 40px;
+         height: 40px;
+         background-size: contain;
+         background-repeat: no-repeat;
+         background-position: center;
+     }
+ }
+ 
+ 
+ /* * * * * * * * * * * * * * * 
+  * Recolor Unbranded sections 
+  * * * * * * * * * * * * * * */
+ /* 
+     1. Pathophysiology 
+     lesson-id: "GhPuWrH96vkVwFPg7InHSbMMOus50v7X"
  */
-.progress {
-    visibility: hidden;
-}
-.progress-bar {
-    display: none;
-}
-
-
-/*
- * Animations
+ [data-lesson-id="GhPuWrH96vkVwFPg7InHSbMMOus50v7X"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="GhPuWrH96vkVwFPg7InHSbMMOus50v7X"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="GhPuWrH96vkVwFPg7InHSbMMOus50v7X"] .brand--beforeBackground:before,
+ [data-lesson-id="GhPuWrH96vkVwFPg7InHSbMMOus50v7X"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="GhPuWrH96vkVwFPg7InHSbMMOus50v7X"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     2. TD and antipsychotic use in LTC 
+     lesson-id: "z-oxyW_zUMu4aQbVG1UCeq5TwIWx81RN"
  */
-.continue-btn{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    transition: all ease-in-out 300ms;
-}
-.continue-btn:hover {
-    opacity: .8;
-}
-
-/*
- * Accordion icon
-*/
-.blocks-accordion__header {
-    display: flex;
-    align-items: center;
-}
-.blocks-accordion__title .blocks-accordion__icon {
-    font-size: 0;
-}
-.blocks-accordion__title .blocks-accordion__icon:before {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 37px;
-    background-image: url(chat.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.custom-accordion .blocks-accordion__item {
-    border-top-color: #A6BBC3;
-}
-.custom-accordion .block-card.bg--light, 
-.custom-accordion .blocks-accordion__wrapper {
-    box-shadow: none;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: #A6BBC3;
-}
-.custom-accordion + .custom-accordion .blocks-accordion__item:first-child {
-    border-top: none;
-}
-.custom-accordion .blocks-accordion__toggler {
-    font-size: 0;
-    position: relative;
-}
-.custom-accordion .blocks-accordion__toggler::before {
-    content: '';
-    background-image: url(arrow_down.png);
-    display: block;
-    width: 51px;
-    height: 51px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%) rotate(180deg);
-}
-.custom-accordion .blocks-accordion__item--closed .blocks-accordion__toggler::before{
-    transform: translateY(-50%);
-}
-@media(max-width:760px){
-    .custom-accordion .blocks-accordion__header {
-        padding: 15px 20px;
-    }
-    .custom-accordion .blocks-accordion__toggler::before {
-        width: 40px;
-        height: 40px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-}
-
-
-/* * * * * * * * * * * * * * * 
- * Recolor Unbranded sections 
- * * * * * * * * * * * * * * */
-/* 
-    1. Pathophysiology 
-    lesson-id: "GhPuWrH96vkVwFPg7InHSbMMOus50v7X"
-*/
-[data-lesson-id="GhPuWrH96vkVwFPg7InHSbMMOus50v7X"] .lesson-header__top-wrap {
-    color: #595478;
-}
-[data-lesson-id="GhPuWrH96vkVwFPg7InHSbMMOus50v7X"] .brand--color {
-    color: #595478!important;
-}
-[data-lesson-id="GhPuWrH96vkVwFPg7InHSbMMOus50v7X"] .brand--beforeBackground:before,
-[data-lesson-id="GhPuWrH96vkVwFPg7InHSbMMOus50v7X"] .brand--background {
-    background-color: #595478 !important;
-}
-[data-lesson-id="GhPuWrH96vkVwFPg7InHSbMMOus50v7X"] .brand--border{
-    border-color: #595478 !important;
-}
-
-/* 
-    2. TD and antipsychotic use in LTC 
-    lesson-id: "z-oxyW_zUMu4aQbVG1UCeq5TwIWx81RN"
-*/
-[data-lesson-id="z-oxyW_zUMu4aQbVG1UCeq5TwIWx81RN"] .lesson-header__top-wrap {
-    color: #595478;
-}
-[data-lesson-id="z-oxyW_zUMu4aQbVG1UCeq5TwIWx81RN"] .brand--color {
-    color: #595478!important;
-}
-[data-lesson-id="z-oxyW_zUMu4aQbVG1UCeq5TwIWx81RN"] .brand--beforeBackground:before,
-[data-lesson-id="z-oxyW_zUMu4aQbVG1UCeq5TwIWx81RN"] .brand--background {
-    background-color: #595478 !important;
-}
-[data-lesson-id="z-oxyW_zUMu4aQbVG1UCeq5TwIWx81RN"] .brand--border{
-    border-color: #595478 !important;
-}
-
-/* 
-    3. Prevalence and incidence
-    lesson-id: "TmcRzINihx8PuTOMheswZVgSC6TExzag"
-*/
-[data-lesson-id="TmcRzINihx8PuTOMheswZVgSC6TExzag"] .lesson-header__top-wrap {
-    color: #595478;
-}
-[data-lesson-id="TmcRzINihx8PuTOMheswZVgSC6TExzag"] .brand--color {
-    color: #595478!important;
-}
-[data-lesson-id="TmcRzINihx8PuTOMheswZVgSC6TExzag"] .brand--beforeBackground:before,
-[data-lesson-id="TmcRzINihx8PuTOMheswZVgSC6TExzag"] .brand--background {
-    background-color: #595478 !important;
-}
-[data-lesson-id="TmcRzINihx8PuTOMheswZVgSC6TExzag"] .brand--border{
-    border-color: #595478 !important;
-}
-
-/* 
-    4. Healthcare utilization and costs
-    lesson-id: "xqFwE9YbZz4VFGDAAykPVrEhxN0oU-2n"
-*/
-[data-lesson-id="xqFwE9YbZz4VFGDAAykPVrEhxN0oU-2n"] .lesson-header__top-wrap {
-    color: #595478;
-}
-[data-lesson-id="xqFwE9YbZz4VFGDAAykPVrEhxN0oU-2n"] .brand--color {
-    color: #595478!important;
-}
-[data-lesson-id="xqFwE9YbZz4VFGDAAykPVrEhxN0oU-2n"] .brand--beforeBackground:before,
-[data-lesson-id="xqFwE9YbZz4VFGDAAykPVrEhxN0oU-2n"] .brand--background {
-    background-color: #595478 !important;
-}
-[data-lesson-id="xqFwE9YbZz4VFGDAAykPVrEhxN0oU-2n"] .brand--border{
-    border-color: #595478 !important;
-}
-
-/* 
-    5. Quality measures in LTC settings
-    lesson-id: "BUocCeENVyVCeUqkdm1zLxL0xCcM9g6f"
-*/
-[data-lesson-id="BUocCeENVyVCeUqkdm1zLxL0xCcM9g6f"] .lesson-header__top-wrap {
-    color: #595478;
-}
-[data-lesson-id="BUocCeENVyVCeUqkdm1zLxL0xCcM9g6f"] .brand--color {
-    color: #595478!important;
-}
-[data-lesson-id="BUocCeENVyVCeUqkdm1zLxL0xCcM9g6f"] .brand--beforeBackground:before,
-[data-lesson-id="BUocCeENVyVCeUqkdm1zLxL0xCcM9g6f"] .brand--background {
-    background-color: #595478 !important;
-}
-[data-lesson-id="BUocCeENVyVCeUqkdm1zLxL0xCcM9g6f"] .brand--border{
-    border-color: #595478 !important;
-}
-
-/* 
-    6. Clinical presentation
-    lesson-id: "nhPIPolUjBNbG4393ChjiHEp_cBngm4i"
-*/
-[data-lesson-id="nhPIPolUjBNbG4393ChjiHEp_cBngm4i"] .lesson-header__top-wrap {
-    color: #595478;
-}
-[data-lesson-id="nhPIPolUjBNbG4393ChjiHEp_cBngm4i"] .brand--color {
-    color: #595478!important;
-}
-[data-lesson-id="nhPIPolUjBNbG4393ChjiHEp_cBngm4i"] .brand--beforeBackground:before,
-[data-lesson-id="nhPIPolUjBNbG4393ChjiHEp_cBngm4i"] .brand--background {
-    background-color: #595478 !important;
-}
-[data-lesson-id="nhPIPolUjBNbG4393ChjiHEp_cBngm4i"] .brand--border{
-    border-color: #595478 !important;
-}
-
-/* 
-    7. Differential diagnosis
-    lesson-id: "hKS2GBHpW1a412b39z2xOP0cb5wFnCkE"
-*/
-[data-lesson-id="hKS2GBHpW1a412b39z2xOP0cb5wFnCkE"] .lesson-header__top-wrap {
-    color: #595478;
-}
-[data-lesson-id="hKS2GBHpW1a412b39z2xOP0cb5wFnCkE"] .brand--color {
-    color: #595478!important;
-}
-[data-lesson-id="hKS2GBHpW1a412b39z2xOP0cb5wFnCkE"] .brand--beforeBackground:before,
-[data-lesson-id="hKS2GBHpW1a412b39z2xOP0cb5wFnCkE"] .brand--background {
-    background-color: #595478 !important;
-}
-[data-lesson-id="hKS2GBHpW1a412b39z2xOP0cb5wFnCkE"] .brand--border{
-    border-color: #595478 !important;
-}
-
-/* 
-    8. Clinical guidelines and recommendations for TD management
-    lesson-id: "YsGSW3tZbOvS0kaqqDyXKu3zff_TZ9nA"
-*/
-[data-lesson-id="YsGSW3tZbOvS0kaqqDyXKu3zff_TZ9nA"] .lesson-header__top-wrap {
-    color: #595478;
-}
-[data-lesson-id="YsGSW3tZbOvS0kaqqDyXKu3zff_TZ9nA"] .brand--color {
-    color: #595478!important;
-}
-[data-lesson-id="YsGSW3tZbOvS0kaqqDyXKu3zff_TZ9nA"] .brand--beforeBackground:before,
-[data-lesson-id="YsGSW3tZbOvS0kaqqDyXKu3zff_TZ9nA"] .brand--background {
-    background-color: #595478 !important;
-}
-[data-lesson-id="YsGSW3tZbOvS0kaqqDyXKu3zff_TZ9nA"] .brand--border{
-    border-color: #595478 !important;
-}
-
-/* 
-    9. Guidance for managing TD in LTC Residents
-    lesson-id: "CNMmglMZYrBV_i-krIcnPiQ3bTz9QuWD"
-*/
-[data-lesson-id="CNMmglMZYrBV_i-krIcnPiQ3bTz9QuWD"] .lesson-header__top-wrap {
-    color: #595478;
-}
-[data-lesson-id="CNMmglMZYrBV_i-krIcnPiQ3bTz9QuWD"] .brand--color {
-    color: #595478!important;
-}
-[data-lesson-id="CNMmglMZYrBV_i-krIcnPiQ3bTz9QuWD"] .brand--beforeBackground:before,
-[data-lesson-id="CNMmglMZYrBV_i-krIcnPiQ3bTz9QuWD"] .brand--background {
-    background-color: #595478 !important;
-}
-[data-lesson-id="CNMmglMZYrBV_i-krIcnPiQ3bTz9QuWD"] .brand--border{
-    border-color: #595478 !important;
-}
-
-/* 
-    10. Clinician perspectives on VMAT2 inhibitors
-    lesson-id: "IyPFWhedAWDQAkmSyQn2I0N4tx72YF6i"
-*/
-[data-lesson-id="IyPFWhedAWDQAkmSyQn2I0N4tx72YF6i"] .lesson-header__top-wrap {
-    color: #595478;
-}
-[data-lesson-id="IyPFWhedAWDQAkmSyQn2I0N4tx72YF6i"] .brand--color {
-    color: #595478!important;
-}
-[data-lesson-id="IyPFWhedAWDQAkmSyQn2I0N4tx72YF6i"] .brand--beforeBackground:before,
-[data-lesson-id="IyPFWhedAWDQAkmSyQn2I0N4tx72YF6i"] .brand--background {
-    background-color: #595478 !important;
-}
-[data-lesson-id="IyPFWhedAWDQAkmSyQn2I0N4tx72YF6i"] .brand--border{
-    border-color: #595478 !important;
-}
-
-/* 
-    11. Overview
-    lesson-id: "wDLMCpjQ3XIDXlj7NOpX9BbCjz3ztNSM"
-*/
-[data-block-id="cl656kj9o003q3b6q2q3q71la"] .block-impact {
-    background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
-}
-/* 
-    16. Dosing and administration
-    lesson-id: "olxOIuHJ_mzuMpNV_76O6phg4J7gwVKB"
-*/
-[data-block-id="cl50cl089001w3b6q09xu6noi"] .block-impact {
-    background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
-}
-/* 
-    17. Cost effectiveness analysis
-    lesson-id: "BTs3QeldGoFy7KTzvpjr07Mw7kUCy2UC"
-*/
-[data-block-id="cl50dwjfr00543b6qsumodi7t"] .block-impact {
-    background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
-}
-/* 
-    18. Comparative effectiveness
-    lesson-id: "_rjgH8mW3N7T8HnZP9bej5GLKZyTb9n2"
-*/
-[data-block-id="cl6f4ftm000403b6qotqro6xk"] .block-impact {
-    background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
-}
-/* 
-    20.Ordering and supply
-    lesson-id: "FwwSLDFoEAYVT5L7kxr1wA466vku8TX1"
-*/
-[data-block-id="cl63uuvnn001r3b6rd01132vv"] .block-impact {
-    background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
-}
+ [data-lesson-id="z-oxyW_zUMu4aQbVG1UCeq5TwIWx81RN"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="z-oxyW_zUMu4aQbVG1UCeq5TwIWx81RN"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="z-oxyW_zUMu4aQbVG1UCeq5TwIWx81RN"] .brand--beforeBackground:before,
+ [data-lesson-id="z-oxyW_zUMu4aQbVG1UCeq5TwIWx81RN"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="z-oxyW_zUMu4aQbVG1UCeq5TwIWx81RN"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     3. Prevalence and incidence
+     lesson-id: "TmcRzINihx8PuTOMheswZVgSC6TExzag"
+ */
+ [data-lesson-id="TmcRzINihx8PuTOMheswZVgSC6TExzag"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="TmcRzINihx8PuTOMheswZVgSC6TExzag"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="TmcRzINihx8PuTOMheswZVgSC6TExzag"] .brand--beforeBackground:before,
+ [data-lesson-id="TmcRzINihx8PuTOMheswZVgSC6TExzag"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="TmcRzINihx8PuTOMheswZVgSC6TExzag"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     4. Healthcare utilization and costs
+     lesson-id: "xqFwE9YbZz4VFGDAAykPVrEhxN0oU-2n"
+ */
+ [data-lesson-id="xqFwE9YbZz4VFGDAAykPVrEhxN0oU-2n"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="xqFwE9YbZz4VFGDAAykPVrEhxN0oU-2n"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="xqFwE9YbZz4VFGDAAykPVrEhxN0oU-2n"] .brand--beforeBackground:before,
+ [data-lesson-id="xqFwE9YbZz4VFGDAAykPVrEhxN0oU-2n"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="xqFwE9YbZz4VFGDAAykPVrEhxN0oU-2n"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     5. Quality measures in LTC settings
+     lesson-id: "BUocCeENVyVCeUqkdm1zLxL0xCcM9g6f"
+ */
+ [data-lesson-id="BUocCeENVyVCeUqkdm1zLxL0xCcM9g6f"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="BUocCeENVyVCeUqkdm1zLxL0xCcM9g6f"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="BUocCeENVyVCeUqkdm1zLxL0xCcM9g6f"] .brand--beforeBackground:before,
+ [data-lesson-id="BUocCeENVyVCeUqkdm1zLxL0xCcM9g6f"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="BUocCeENVyVCeUqkdm1zLxL0xCcM9g6f"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     6. Clinical presentation
+     lesson-id: "nhPIPolUjBNbG4393ChjiHEp_cBngm4i"
+ */
+ [data-lesson-id="nhPIPolUjBNbG4393ChjiHEp_cBngm4i"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="nhPIPolUjBNbG4393ChjiHEp_cBngm4i"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="nhPIPolUjBNbG4393ChjiHEp_cBngm4i"] .brand--beforeBackground:before,
+ [data-lesson-id="nhPIPolUjBNbG4393ChjiHEp_cBngm4i"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="nhPIPolUjBNbG4393ChjiHEp_cBngm4i"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     7. Differential diagnosis
+     lesson-id: "hKS2GBHpW1a412b39z2xOP0cb5wFnCkE"
+ */
+ [data-lesson-id="hKS2GBHpW1a412b39z2xOP0cb5wFnCkE"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="hKS2GBHpW1a412b39z2xOP0cb5wFnCkE"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="hKS2GBHpW1a412b39z2xOP0cb5wFnCkE"] .brand--beforeBackground:before,
+ [data-lesson-id="hKS2GBHpW1a412b39z2xOP0cb5wFnCkE"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="hKS2GBHpW1a412b39z2xOP0cb5wFnCkE"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     8. Clinical guidelines and recommendations for TD management
+     lesson-id: "YsGSW3tZbOvS0kaqqDyXKu3zff_TZ9nA"
+ */
+ [data-lesson-id="YsGSW3tZbOvS0kaqqDyXKu3zff_TZ9nA"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="YsGSW3tZbOvS0kaqqDyXKu3zff_TZ9nA"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="YsGSW3tZbOvS0kaqqDyXKu3zff_TZ9nA"] .brand--beforeBackground:before,
+ [data-lesson-id="YsGSW3tZbOvS0kaqqDyXKu3zff_TZ9nA"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="YsGSW3tZbOvS0kaqqDyXKu3zff_TZ9nA"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     9. Guidance for managing TD in LTC Residents
+     lesson-id: "CNMmglMZYrBV_i-krIcnPiQ3bTz9QuWD"
+ */
+ [data-lesson-id="CNMmglMZYrBV_i-krIcnPiQ3bTz9QuWD"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="CNMmglMZYrBV_i-krIcnPiQ3bTz9QuWD"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="CNMmglMZYrBV_i-krIcnPiQ3bTz9QuWD"] .brand--beforeBackground:before,
+ [data-lesson-id="CNMmglMZYrBV_i-krIcnPiQ3bTz9QuWD"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="CNMmglMZYrBV_i-krIcnPiQ3bTz9QuWD"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     10. Clinician perspectives on VMAT2 inhibitors
+     lesson-id: "IyPFWhedAWDQAkmSyQn2I0N4tx72YF6i"
+ */
+ [data-lesson-id="IyPFWhedAWDQAkmSyQn2I0N4tx72YF6i"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="IyPFWhedAWDQAkmSyQn2I0N4tx72YF6i"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="IyPFWhedAWDQAkmSyQn2I0N4tx72YF6i"] .brand--beforeBackground:before,
+ [data-lesson-id="IyPFWhedAWDQAkmSyQn2I0N4tx72YF6i"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="IyPFWhedAWDQAkmSyQn2I0N4tx72YF6i"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     11. Overview
+     lesson-id: "wDLMCpjQ3XIDXlj7NOpX9BbCjz3ztNSM"
+ */
+ [data-block-id="cl656kj9o003q3b6q2q3q71la"] .block-impact {
+     background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
+     background: transparent -o-linear-gradient(left,#d50054,#ff6b00) 0 0 no-repeat;
+     background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
+ }
+ /* 
+     16. Dosing and administration
+     lesson-id: "olxOIuHJ_mzuMpNV_76O6phg4J7gwVKB"
+ */
+ [data-block-id="cl50cl089001w3b6q09xu6noi"] .block-impact {
+     background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
+     background: transparent -o-linear-gradient(left,#d50054,#ff6b00) 0 0 no-repeat;
+     background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
+ }
+ /* 
+     17. Cost effectiveness analysis
+     lesson-id: "BTs3QeldGoFy7KTzvpjr07Mw7kUCy2UC"
+ */
+ [data-block-id="cl50dwjfr00543b6qsumodi7t"] .block-impact {
+     background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
+     background: transparent -o-linear-gradient(left,#d50054,#ff6b00) 0 0 no-repeat;
+     background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
+ }
+ /* 
+     18. Comparative effectiveness
+     lesson-id: "_rjgH8mW3N7T8HnZP9bej5GLKZyTb9n2"
+ */
+ [data-block-id="cl6f4ftm000403b6qotqro6xk"] .block-impact {
+     background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
+     background: transparent -o-linear-gradient(left,#d50054,#ff6b00) 0 0 no-repeat;
+     background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
+ }
+ /* 
+     20.Ordering and supply
+     lesson-id: "FwwSLDFoEAYVT5L7kxr1wA466vku8TX1"
+ */
+ [data-block-id="cl63uuvnn001r3b6rd01132vv"] .block-impact {
+     background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
+     background: transparent -o-linear-gradient(left,#d50054,#ff6b00) 0 0 no-repeat;
+     background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
+ }
 
 
 /* * * * * * * * * * * * * * * 
@@ -385,11 +420,14 @@
     z-index: 999999;
     padding: 0;
     max-width: 300px;
-    box-shadow: 0 0 10px #00000036;
+    -webkit-box-shadow: 0 0 10px #00000036;
+            box-shadow: 0 0 10px #00000036;
     height: 50%;
     max-height: 600px;
     overflow: hidden;
     border: 2px solid #d50054;
+    -webkit-transition: all ease-in-out 300ms;
+    -o-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms;
 }
 .floating-modal {
@@ -487,7 +525,9 @@
         bottom: 0;
         top: auto;
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
         height: 70px;
     }
     .floating-modal__title{
@@ -507,5 +547,4 @@
         padding-right: 40px;
     }
 }
-
 

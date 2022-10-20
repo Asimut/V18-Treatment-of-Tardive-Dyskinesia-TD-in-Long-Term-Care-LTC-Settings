@@ -1,6 +1,7 @@
 (function($){
+
   $('#app').on('DOMNodeInserted', function(e) {  
-    getActiveNavSection();  
+    getActiveNavSection();      
     
     $('.blocks-accordion__title .fr-view').each(function(){
       var text = $(this).text(),
@@ -14,11 +15,33 @@
         parent.addClass('custom-accordion');
       }       
 
-    })
+    }); 
+    
+    //Set BackButton Title
+    var title = $('.lesson-nav--previous .lesson-nav__link-text'),
+        titleLink = title.closest('.lesson-nav-link__link').attr('href'),
+        titleText = title.text();
+
+    var newTitle = $('.nav-sidebar__outline-section-item__link[href="'+titleLink+'"]').text();
+    if(titleText!= "HOME"){
+      title.attr('name', newTitle);
+    }
+      
   });  
   
   window.addEventListener("hashchange", function(){
-    getActiveNavSection();
+    getActiveNavSection(); 
+    
+    //Set BackButton Title
+    var title = $('.lesson-nav--previous .lesson-nav__link-text'),
+        titleLink = title.closest('.lesson-nav-link__link').attr('href'),
+        titleText = title.text();
+
+    var newTitle = $('.nav-sidebar__outline-section-item__link[href="'+titleLink+'"]').text();
+    if(titleText!= "HOME"){
+      title.text(newTitle);
+    }
+        
   });
 
 })(jQuery); 
