@@ -95,12 +95,11 @@ var linklabel = "Link:";
 
 $(document).ready(function() {
   initialProcessNotes();
-  // processNotes();
   addEvents();
 
-  fixedPlace(); //Text block
+  // fixedPlace(); 
   $(window).on('resize', function(){
-    fixedPlace(); 
+    // fixedPlace(); 
   });
 })
 
@@ -239,6 +238,8 @@ function processEntry( note ) {
   * @return none
 */
 function renderEntrytoDOM( parentcontainer, entry, sectionid, entryid ) {
+
+  $('.blocks-lesson').addClass('has-modal');
   
   // create container
   var container = document.createElement("div");
