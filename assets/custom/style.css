@@ -429,6 +429,7 @@
     -webkit-transition: all ease-in-out 300ms;
     -o-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms;
+    margin: 0;
 }
 .floating-modal {
     font-family: 'Lato', sans-serif;
@@ -442,6 +443,7 @@
     padding: 5px 10px;
     font-size: 15px;
     text-align: center;
+    white-space: nowrap;
 }
 .floating-modal__prompt {
     position: absolute;
@@ -453,6 +455,10 @@
 }
 .floating-modal__prompt a {
     color: #d50054;
+}
+.floating-modal__prompt sup {
+    vertical-align: super;
+    font-size: smaller;
 }
 .floating-modal__prompt p {
     margin-bottom: 5px;
@@ -496,6 +502,7 @@
     text-decoration: underline;
 }
 
+
 /* scrollbar */
 .block-impact--note-floatingmodal .floating-modal__prompt::-webkit-scrollbar {
     width: 10px;
@@ -509,17 +516,18 @@
     border-radius: 4px;
 }
 
-/* @media(min-width: 1525px){
-    .block-impact--note-floatingmodal .block-impact__container {
-    max-width: 350px;
-  }
-
-  .lesson--open .block-impact--note-floatingmodal .block-impact__container {
-    max-width: 300px;
-  }
+/* .block-impact--note-floatingmodal .block-impact__container {
+    position: fixed;
+     top: 290px;
+     right: 100px;
+     background: #fff;
+     z-index: 999999;
+     padding: 0;
+     width: 300px;
+     max-height: 50%;
+     transition: all ease-in-out 300ms;
 } */
-
-.block-impact--note-floatingmodal .block-impact__container {
+/* .block-impact--note-floatingmodal .block-impact__container {
     width: 90%;
     max-width: 950px;
     bottom: 0;
@@ -529,13 +537,42 @@
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
     height: 310px;
-}
-.blocks-lesson.has-modal {
-    padding-bottom: 310px;
-}
-@media(max-width: 800px){
+} */
+
+@media(min-width: 1525px){
     .block-impact--note-floatingmodal .block-impact__container {
+    width: 350px;
+  }
+
+  .lesson--open .block-impact--note-floatingmodal .block-impact__container {
+    width: 300px;
+  }
+}
+
+/* .block-impact--note-floatingmodal .block-impact__container {
+    width: 90%;
+    max-width: 950px;
+    bottom: 0;
+    top: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 310px;
+} */
+/* .blocks-lesson.has-modal {
+    padding-bottom: 310px;
+} */
+@media(max-width: 1400px){
+    .block-impact--note-floatingmodal .block-impact__container {
+        width: 760px;
         max-width: 90%;
+        bottom: 0;
+        top: auto;
+        left: 49%!important;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
         height: 70px;
     }
     .blocks-lesson.has-modal {

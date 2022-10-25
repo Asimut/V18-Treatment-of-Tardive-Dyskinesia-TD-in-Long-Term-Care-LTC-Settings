@@ -1,7 +1,9 @@
 (function($){
 
   $('#app').on('DOMNodeInserted', function(e) {  
-    getActiveNavSection();      
+    getActiveNavSection();
+    
+    fixedPlace(); 
     
     $('.blocks-accordion__title .fr-view').each(function(){
       var text = $(this).text(),
@@ -99,7 +101,7 @@ $(document).ready(function() {
 
   // fixedPlace(); 
   $(window).on('resize', function(){
-    // fixedPlace(); 
+    fixedPlace(); 
   });
 })
 
@@ -125,8 +127,7 @@ function addEvents() {
     }
 
   }
-  window.addEventListener("DOMNodeInserted", nodeadded, false);
-   
+  window.addEventListener("DOMNodeInserted", nodeadded, false);   
 }
 
 /**
@@ -199,6 +200,7 @@ function processNotes() {
       case flagEntry:
         processEntry( this );
         this.parentNode.removeChild(this);
+        fixedPlace();
         break;
 
       default:
@@ -267,7 +269,7 @@ function renderEntrytoDOM( parentcontainer, entry, sectionid, entryid ) {
   
   parentcontainer.appendChild(container);
 
-  $( ".block-impact--note:has( .floating-modal)").addClass("block-impact--note-floatingmodal");
+  $( ".block-impact--note:has( .floating-modal)").addClass("block-impact--note-floatingmodal");  
 }
 
 
@@ -330,25 +332,52 @@ $(document).on('click', '.floating-modal__title', function(){
   }  
 });
 
+$(document).on('click', '.page-menu-toggle', function(){
 
+  console.log('click');
+  setTimeout(fixedPlace, 500);
+});
 
 function fixedPlace() {
+  
   if (1400 < window.innerWidth) {
+    console.log('fixedPlace');
+    console.log($('.lesson-header'))
 
-    var elFixed = $('#app .block-impact--note-floatingmodal .block-impact__container');
-
-    if(elFixed.length){
-      var leftOffset = $('.custom-accordion .blocks-accordion__wrapper').offset().left,
-          contentWidth = $('.custom-accordion .blocks-accordion__wrapper').outerWidth();    
+    if($('.lesson-header').length){    
+      var leftOffset = $('.lesson-header').offset().left,
+          contentWidth = $('.lesson-header').outerWidth();    
       // var leftOffset = $('.continue-btn').offset().left,
-      //     contentWidth = $('.continue-btn').outerWidth();         
+      //     contentWidth = $('.continue-btn').outerWidth();
+      
+      console.log('leftOffset ' + leftOffset)
+      console.log('contentWidth ' + contentWidth)
+      console.log('window '+$(window).width())
+      
+      var elFixed = $('#app .block-impact--note-floatingmodal .block-impact__container');
+        
+      if(elFixed.length){
 
-      var a = $(window).width() - (leftOffset + contentWidth),
-          aNew = a - $('.block-impact--note-floatingmodal .block-impact__container').outerWidth() - 10;
+        var fixedBlockWidth = $('.block-impact--note-floatingmodal .block-impact__container').outerWidth();
+        if (fixedBlockWidth>350){
+          fixedBlockWidth = 350;
+        }
 
-      elFixed.css({
-        right: aNew,
-      });
+      // var a = $(window).width() - (leftOffset + contentWidth),
+      //     aNew = a - fixedBlockWidth - 10; 
+
+      //       console.log('a '+a)
+      //       console.log('aNew '+aNew)
+
+      //   elFixed.css({
+      //     right: aNew,
+      //   });
+
+        var leftPosition = leftOffset + contentWidth + 10;
+        elFixed.css({
+          left: leftPosition,
+        });
+      }
     }
   }
 }
