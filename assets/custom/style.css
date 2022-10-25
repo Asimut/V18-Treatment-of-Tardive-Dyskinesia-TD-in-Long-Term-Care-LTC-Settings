@@ -415,7 +415,7 @@
 .block-impact--note-floatingmodal .block-impact__container {
     position: fixed;
     top: 290px;
-    right: 100px;
+    right: 30px;
     background: #fff;
     z-index: 999999;
     padding: 0;
@@ -596,3 +596,18 @@
     }
 }
 
+
+@media (min-width: 52.5em) {
+    .block-image__col:first-child {
+        margin-left: 8.3333333333%;
+        width: 83.3333333333%;
+    }
+    .block-image--text-aside.block-image--small .block-image__col:first-child {
+        margin-left: 8.3333333333%;
+    }
+    .block-image--text-aside.block-image--reverse.block-image--small .block-image__col:last-child {
+        margin-left: 0;
+        margin-right: 8.3333333333%;
+        width: 50%;
+    }    
+}
