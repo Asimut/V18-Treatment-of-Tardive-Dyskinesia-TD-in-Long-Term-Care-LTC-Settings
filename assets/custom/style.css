@@ -462,6 +462,7 @@
 }
 .floating-modal__prompt p {
     margin-bottom: 5px;
+    line-height: 1.2;
 }
 .floating-modal__prompt p:first-child {
     line-height: 0;
@@ -548,22 +549,7 @@
     width: 300px;
   }
 }
-
-/* .block-impact--note-floatingmodal .block-impact__container {
-    width: 90%;
-    max-width: 950px;
-    bottom: 0;
-    top: auto;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    height: 310px;
-} */
-/* .blocks-lesson.has-modal {
-    padding-bottom: 310px;
-} */
-@media(max-width: 1400px){
+/* @media(max-width: 1400px){
     .block-impact--note-floatingmodal .block-impact__container {
         width: 760px;
         max-width: 90%;
@@ -588,6 +574,81 @@
     }  
     .block-impact--note-floatingmodal .block-impact__container.open {
       height: 70%;
+    }
+} */
+@media(max-width: 1400px){
+    .blocks-lesson.has-modal {
+        padding-bottom: 110px;
+    }
+    .floating-modal__link{
+        display: none;
+    }
+    .floating-modal__title{
+        text-align: left;
+    }
+   .floating-modal__title:after{
+        content: '+';        
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1em;
+        color: #636363;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .open .floating-modal__title:after {
+        content: '-';
+    }
+    .floating-modal__prompt{
+        bottom: 0;
+    }
+    .floating-modal__prompt>p * {
+        font-size: 16px!important;
+    }
+    .floating-modal__prompt>p>s{
+        font-size: 0!important;
+    }
+    .floating-modal__prompt p:first-child{
+        display: none;
+    }
+    .floating-modal__title{
+        position: relative;
+    }
+    .block-impact--note-floatingmodal .block-impact__container {
+        max-width: 100%;
+        width: 100%;
+        left: 0!important;
+        bottom: 0;
+        top: auto;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        border: none;
+        box-shadow: none;
+        max-height: 115px;
+    }
+    .block-impact--note-floatingmodal .block-impact__container.open {
+        height: 100%;
+        max-height: none;
+    }
+    .block-impact__container.open .floating-modal__title{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .block-impact__container.open .floating-modal__prompt{
+        top: 60px;
+    }
+    .floating-modal__prompt>p>s::before{
+        display: none;
+    }
+}
+@media(max-width:742px){
+    .blocks-lesson.has-modal {
+        padding-bottom: 130px;
+    }
+    .block-impact--note-floatingmodal .block-impact__container {
+        max-height: 135px;
     }
 }
 @media(max-width: 380px){
