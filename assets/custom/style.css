@@ -672,3 +672,27 @@
         width: 50%;
     }    
 }
+
+
+
+[data-block-id="cl4xht73m00o53b6x03p0qxq1"] .block-list__checkbox{
+    background-color: #595478 !important;
+}
+[data-block-id="cl4xht73m00o53b6x03p0qxq1"] .block-list__checkbox .block-list__checkbox__icon {
+    color: #fff;
+}
+[data-block-id="cl4xht73m00o53b6x03p0qxq1"] .block-list__checkbox .block-list__checkbox__icon {
+    opacity: 1!important;
+}
+
+
+.cover__details-content:after{
+    content: '2022 Neurocrine Biosciences, Inc. All Rights Reserved. CP-VBZ-US-2072 12/2022';
+    display: block;
+    text-align: center;
+    padding-top: 90px;
+    font-family: lato,sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.6rem;
+}

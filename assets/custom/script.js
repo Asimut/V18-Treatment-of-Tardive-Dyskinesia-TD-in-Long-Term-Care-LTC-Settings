@@ -350,9 +350,9 @@ function fixedPlace() {
       // var leftOffset = $('.continue-btn').offset().left,
       //     contentWidth = $('.continue-btn').outerWidth();
       
-      console.log('leftOffset ' + leftOffset)
-      console.log('contentWidth ' + contentWidth)
-      console.log('window '+$(window).width())
+      // console.log('leftOffset ' + leftOffset)
+      // console.log('contentWidth ' + contentWidth)
+      // console.log('window '+$(window).width())
       
       var elFixed = $('#app .block-impact--note-floatingmodal .block-impact__container');
         
