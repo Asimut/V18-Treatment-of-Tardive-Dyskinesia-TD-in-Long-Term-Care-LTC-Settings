@@ -2,6 +2,8 @@
  * New Styles
  */
 
+ @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&display=swap');
+
  .nav-sidebar-header__graphic,
  .classic .cover__header-content {
      background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
