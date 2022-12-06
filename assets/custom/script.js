@@ -1,7 +1,7 @@
 (function($){
 
   $('#app').on('DOMNodeInserted', function(e) {  
-    getActiveNavSection();
+    
     
     fixedPlace(); 
     
@@ -38,11 +38,12 @@
     // if(titleNextText!= "HOME"){
       titleNext.attr('name', newNextTitle);
     // }
+
+    getActiveNavSection();
       
   });  
   
-  window.addEventListener("hashchange", function(){
-    getActiveNavSection(); 
+  window.addEventListener("hashchange", function(){    
     
     //Set BackButton Title
     var title = $('.lesson-nav--previous .lesson-nav__link-text'),
@@ -63,6 +64,8 @@
     // if(titleNextText!= "HOME"){
       titleNext.text(newNextTitle);
     // }
+
+    getActiveNavSection();
         
   });
 
@@ -72,13 +75,23 @@ function getActiveNavSection (){
   var toggleBtnParent = $('.nav-sidebar__outline-section-item__link.active').closest('.nav-sidebar__outline-item'),
   toggleBtnAttr = toggleBtnParent.find('.nav-sidebar__outline-section-toggle').attr('aria-controls');
 
-  $('.nav-sidebar').addClass(toggleBtnAttr);
+  console.log(toggleBtnAttr)
+  $('#app #innerApp').removeClass("sidebar-sublist-0 sidebar-sublist-1 sidebar-sublist-2 sidebar-sublist-3 sidebar-sublist-4 sidebar-sublist-5");
 
-  if(toggleBtnAttr == "sidebar-sublist-0"){
-    $('.nav-sidebar').addClass(toggleBtnAttr);
-  } else {
-    $('.nav-sidebar').removeClass("sidebar-sublist-0");
-  }
+  $('#app #innerApp').addClass(toggleBtnAttr);
+
+  // if(toggleBtnAttr == "sidebar-sublist-0"){
+  //   $('#app #innerApp').addClass(toggleBtnAttr);
+  // } else {
+  //   $('#app #innerApp').removeClass("sidebar-sublist-0");
+  // }
+  // $('#app .nav-sidebar').addClass(toggleBtnAttr);
+  // if(toggleBtnAttr == "sidebar-sublist-0"){
+  //   $('#app .nav-sidebar').addClass(toggleBtnAttr);
+  // } else {
+  //   $('#app .nav-sidebar').removeClass("sidebar-sublist-0");
+  // }
+  console.log('toggleBtnAttr '+toggleBtnAttr)
 }
   
 // These css selectors select the Notes and select the contents of each Note
