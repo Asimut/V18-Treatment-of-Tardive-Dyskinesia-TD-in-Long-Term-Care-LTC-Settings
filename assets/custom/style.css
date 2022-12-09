@@ -612,6 +612,25 @@
     width: 300px;
   }
 }
+@media (min-width:1401px) and (max-width:1524px){
+    .floating-modal__title span {
+        max-width: 150px;
+        display: block;
+        margin: 0 auto;
+    }
+    .floating-modal__prompt{
+        top: 60px;
+    }
+}
+@media (min-width:1401px) and (max-width:1440px){
+    .course-navigation__sidebar--nav-open .floating-modal__title span {
+        /* max-width: 135px; */
+        font-size: 14px;
+    }
+    .course-navigation__sidebar--nav-open .floating-modal__prompt{
+        top: 70px;
+    }
+}
 /* @media(max-width: 1400px){
     .block-impact--note-floatingmodal .block-impact__container {
         width: 760px;
