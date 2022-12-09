@@ -386,10 +386,23 @@ function fixedPlace() {
       //     right: aNew,
       //   });
 
+      
+
         var leftPosition = leftOffset + contentWidth + 10;
         elFixed.css({
           left: leftPosition,
         });
+        setTimeout(function(){
+
+          var headerHeight = elFixed.find('.floating-modal__title').outerHeight();
+        console.log(headerHeight);
+        elFixed.find('.floating-modal__prompt').css({
+          top: headerHeight+5,
+        });
+
+        }, 800)
+
+        
       }
     }
   }
