@@ -75,22 +75,11 @@ function getActiveNavSection (){
   var toggleBtnParent = $('.nav-sidebar__outline-section-item__link.active').closest('.nav-sidebar__outline-item'),
   toggleBtnAttr = toggleBtnParent.find('.nav-sidebar__outline-section-toggle').attr('aria-controls');
 
-  console.log(toggleBtnAttr)
+  // console.log(toggleBtnAttr)
   $('#app #innerApp').removeClass("sidebar-sublist-0 sidebar-sublist-1 sidebar-sublist-2 sidebar-sublist-3 sidebar-sublist-4 sidebar-sublist-5");
 
   $('#app #innerApp').addClass(toggleBtnAttr);
 
-  // if(toggleBtnAttr == "sidebar-sublist-0"){
-  //   $('#app #innerApp').addClass(toggleBtnAttr);
-  // } else {
-  //   $('#app #innerApp').removeClass("sidebar-sublist-0");
-  // }
-  // $('#app .nav-sidebar').addClass(toggleBtnAttr);
-  // if(toggleBtnAttr == "sidebar-sublist-0"){
-  //   $('#app .nav-sidebar').addClass(toggleBtnAttr);
-  // } else {
-  //   $('#app .nav-sidebar').removeClass("sidebar-sublist-0");
-  // }
   console.log('toggleBtnAttr '+toggleBtnAttr)
 }
   
@@ -299,7 +288,7 @@ function createEntryfromNote( note ) {
       prompt = '';
 
 var notecontents = note.querySelector(noteContentsSelector);
-console.log(notecontents)
+// console.log(notecontents)
 
 var htmlText = "";
 
