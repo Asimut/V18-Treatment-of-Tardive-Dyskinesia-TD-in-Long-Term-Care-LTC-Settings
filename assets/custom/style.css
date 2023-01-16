@@ -63,6 +63,13 @@
  .nav-sidebar__outline-item:first-child .progress-circle {
      color: #595478!important;
  }
+ .nav-sidebar__outline-item:first-child .progress-circle__runner{
+    stroke: #595478!important;
+ }
+ .nav-sidebar__outline-item:first-child  .progress-circle__runner--done{
+    fill: #595478!important;
+ }
+
  /* .nav-sidebar__body{
      position: relative;
  }
