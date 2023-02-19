@@ -465,6 +465,13 @@
  [data-block-id="cl2dphyyi000y3g6jkgxi9pk9"] .blocks-tabs__content-item[id$="-1"] .blocks-tabs__image .img {
     margin-bottom: 0;
  }
+ [data-block-id="cl2dphyyi000y3g6jkgxi9pk9"] .blocks-tabs__content-item[id$="-0"] .blocks-tabs__image .img:after {
+    content: 'Post hoc analysis of outcomes are shown here at Week 6 in the pooled DBPC population (central-rater scoring only) and at Weeks 48 and 52 in the pooled long-term population (central-rater scoring for KINECT 3 and site-rater scoring for KINECT 4), based on observed cases. Least squares mean presented for Week 6; means presented for Weeks 48 and 52.';
+    display: block;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 400;
+ }
  [data-block-id="cl2dphyyi000y3g6jkgxi9pk9"] .blocks-tabs__content-item[id$="-1"] .blocks-tabs__image .img:after {
     content: 'Outcomes analyzed at Week 6 in the pooled DBPC population (central-rater scoring only) and at Weeks 48 and 52 in the pooled long-term population (central-rater scoring for KINECT 3 and site-rater scoring for KINECT 4), based on observed cases. Least squares mean presented for Week 6; means presented for Weeks 48 and 52.';
     display: block;
@@ -780,7 +787,7 @@
 
 
 .cover__details-content:after{
-    content: '2022 Neurocrine Biosciences, Inc. All Rights Reserved. CP-VBZ-US-2072 12/2022';
+    content: '©2023 Neurocrine Biosciences, Inc. All Rights Reserved. CP-VBZ-US-2072 2/2023';
     display: block;
     text-align: center;
     padding-top: 90px;
